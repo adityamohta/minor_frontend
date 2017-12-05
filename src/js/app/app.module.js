@@ -8,5 +8,6 @@ angular.module('track', [
     'ui.materialize',
     'uiGmapgoogle-maps',
     // my modules
-    'dashboard'
+    'dashboard',
+    'deviceDetail'
 ]);

@@ -7,4 +7,24 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col s12">
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Network Operator</th>
+                        <th>Active</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="device in devices">
+                        <td><a ng-href="/devices/{{device.number}}/">{{ device.number }}</a></td>
+                        <td>{{ device.network_operator }}</td>
+                        <td>{{ device.active }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </main>

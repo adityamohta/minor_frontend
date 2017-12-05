@@ -17,6 +17,8 @@ angular.module('track').config(
 
         $routeProvider.when("/", {
             template:"<dashboard></dashboard>"
+        }).when("/devices/:number", {
+            template:"<device-detail></device-detail>"
         }).otherwise({
             template:"Not Found"
         })
