@@ -14,33 +14,20 @@ angular.module('dashboard').component('dashboard', {
         var url = "http://34.211.158.108:8000/devices/";
         $scope.page = "Devices";
         $scope.loading = false;
+        $scope.devices = [];
         var reqConfig = function(url, params){
             return {
                 method: "GET",
                 url: url,
-                params: params
+                params: params,
+                header: {"Authorization": "Negotiate"}
             }
         };
 
-        var requestContents = $http(reqConfig(url, {number: $routeParams.number}));
+        var requestContents = $http(reqConfig(url, {}));
 
         requestContents.success(function (r_data, r_status, r_headers, r_config) {
-            console.log(r_data);
+            $scope.devices = r_data;
         });
-        $scope.devices = [
-            {
-                number:"9560300046",
-                network_operator: "Vodafone",
-                active: true
-            },
-            {
-                number:"8949620699",
-                network_operator: "JIO",
-                active: true
-            }
-        ]
-
-
-
     }
 });

@@ -9,7 +9,59 @@
     </div>
     <div class="row">
         <div class="col s12">
-
+            <table class="responsive-table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Number</th>
+                    <th>Network Operator</th>
+                    <th>Active</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ device.id }}</td>
+                        <td>{{ device.number }}</td>
+                        <td>{{ device.network_operator }}</td>
+                        <td>{{ device.active }}</td>
+                        <td>{{ device.created_at | date: 'medium' }}</td>
+                        <td>{{ device.updated_at | date: 'medium' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="row">
+            <div class="col s12">
+                <h2 class="flow-text center">Trackings</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <table class="responsive-table">
+                <thead>
+                <tr>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Capture Time</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="tracking in trackings">
+                        <td>{{ tracking.latitude }}</td>
+                        <td>{{ tracking.longitude }}</td>
+                        <td>{{ tracking.capture_time | date: 'medium' }}</td>
+                        <td>{{ tracking.created_at | date: 'medium' }}</td>
+                        <td>{{ tracking.updated_at | date: 'medium' }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </main>
