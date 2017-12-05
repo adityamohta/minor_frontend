@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="track">
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Track</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script src='http://maps.googleapis.com/maps/api/js?key=AIzaSyCoxK3YAGIeC022ij1TL3cXzh6iMTEzXD4'></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
+    <script src="https://rawgit.com/angular-ui/angular-google-maps/master/dist/angular-google-maps.js"></script>
+    <script src="https://rawgit.com/nmccready/angular-simple-logger/master/dist/angular-simple-logger.js"></script>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js'></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+
+    <script src='/js/app/app.module.js' ></script>
+    <script src='/js/app/app.config.js' ></script>
+    <script src="/js/app/dashboard/dashboard.module.js"></script>
+    <script src="/js/app/dashboard/dashboard.component.js"></script>
+</head>
+<body>
+    <div ng-view></div>
+</body>
+</html>
