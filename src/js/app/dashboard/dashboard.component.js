@@ -4,6 +4,7 @@
 angular.module('dashboard').component('dashboard', {
     templateUrl: '/templates/dashboard.html',
     controller: function (
+        uiGmapGoogleMapApi,
         $cookies,
         $http,
         $location,

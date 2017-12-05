@@ -23,8 +23,21 @@ angular.module('deviceDetail').component('deviceDetail', {
             $scope.device = r_data.device;
             $scope.trackings = r_data.trackings;
             console.log(r_data);
+            var track = $scope.trackings[0];
+            $scope.marker.coords.latitude = track.latitude;
+            $scope.marker.coords.longitude = track.longitude;
+            $scope.map.center.latitude = track.latitude;
+            $scope.map.center.longitude = track.longitude;
         });
-
-
+        $scope.map = {center: {latitude: 26.8070, longitude: 75.8098 }, zoom: 14 };
+        $scope.options = {scrollwheel: false};
+        $scope.marker = {
+            id: 0,
+            coords: {
+                latitude: 26.8070,
+                longitude: 75.8098
+            },
+            options: { draggable: true }
+        };
     }
 });
